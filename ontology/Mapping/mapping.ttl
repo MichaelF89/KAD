@@ -1,0 +1,353 @@
+@prefix : <http://www.example.org/KnowledgeData/FinalAssignment/mapping/> .
+@prefix ex: <http://www.example.org/KnowledgeData/FinalAssignment/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:mapping a owl:Ontology ;
+	owl:imports <http://www.movieontology.org/2009/11/09/movieontology.owl> , <file:/C:/Users/micha/Documents/UvA/KnowledgeData/Eindopdracht/Ontology/Mapping/LMDB.ttl> , <http://www.example.org/KnowledgeData/FinalAssignment/> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://data.linkedmdb.org/resource/movie/actor_name
+
+<http://data.linkedmdb.org/resource/movie/actor_name> rdfs:subPropertyOf rdfs:label .
+# 
+# http://data.linkedmdb.org/resource/movie/director_name
+
+<http://data.linkedmdb.org/resource/movie/director_name> rdfs:subPropertyOf rdfs:label .
+# 
+# http://data.linkedmdb.org/resource/movie/film_location_name
+
+<http://data.linkedmdb.org/resource/movie/film_location_name> rdfs:subPropertyOf rdfs:label .
+# 
+# http://data.linkedmdb.org/resource/movie/genre_name
+
+<http://data.linkedmdb.org/resource/movie/genre_name> rdfs:subPropertyOf rdfs:label .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://data.linkedmdb.org/resource/movie/featured_film_location
+
+<http://data.linkedmdb.org/resource/movie/featured_film_location> owl:equivalentProperty ex:has_Film_Location .
+# 
+# http://data.linkedmdb.org/resource/movie/genre
+
+<http://data.linkedmdb.org/resource/movie/genre> owl:equivalentProperty ex:has_Genre .
+# 
+# http://data.linkedmdb.org/resource/movie/has_actor
+
+<http://data.linkedmdb.org/resource/movie/has_actor> owl:equivalentProperty <http://www.movieontology.org/2009/10/01/movieontology.owl#hasActor> .
+# 
+# http://data.linkedmdb.org/resource/movie/has_director
+
+<http://data.linkedmdb.org/resource/movie/has_director> owl:equivalentProperty <http://www.movieontology.org/2009/10/01/movieontology.owl#hasDirector> .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/directed
+
+ex:directed owl:equivalentProperty <http://www.movieontology.org/2009/10/01/movieontology.owl#isDirectorOf> .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/has_Film_Location
+
+ex:has_Film_Location owl:equivalentProperty <http://www.movieontology.org/2009/10/01/movieontology.owl#hasFilmLocation> .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/has_Genre
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/is_Genre_of
+
+ex:is_Genre_of owl:equivalentProperty <http://www.movieontology.org/2009/10/01/movieontology.owl#isGenreOf> .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/plays_role_in
+
+ex:plays_role_in owl:equivalentProperty <http://www.movieontology.org/2009/10/01/movieontology.owl#hasActor> .
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#hasActor
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#hasDirector
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#hasFilmLocation
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#isDirectorOf
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#isGenreOf
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/movie_date
+
+ex:movie_date owl:equivalentProperty <http://www.movieontology.org/2009/10/01/movieontology.owl#releasedate> .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/runtime
+
+ex:runtime owl:equivalentProperty <http://www.movieontology.org/2009/10/01/movieontology.owl#runtime> .
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#releasedate
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#runtime
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://data.linkedmdb.org/resource/movie/actor
+
+<http://data.linkedmdb.org/resource/movie/actor> owl:equivalentClass ex:Actor .
+# 
+# http://data.linkedmdb.org/resource/movie/director
+
+<http://data.linkedmdb.org/resource/movie/director> owl:equivalentClass ex:Director .
+# 
+# http://data.linkedmdb.org/resource/movie/film
+
+<http://data.linkedmdb.org/resource/movie/film> owl:equivalentClass ex:Movie .
+# 
+# http://data.linkedmdb.org/resource/movie/film_genre
+
+<http://data.linkedmdb.org/resource/movie/film_genre> owl:equivalentClass ex:Genre .
+# 
+# http://data.linkedmdb.org/resource/movie/film_location
+
+<http://data.linkedmdb.org/resource/movie/film_location> owl:equivalentClass ex:Film_Location .
+# 
+# http://dbpedia.org/ontology/Actor
+
+<http://dbpedia.org/ontology/Actor> owl:equivalentClass ex:Actor .
+# 
+# http://dbpedia.org/ontology/Person
+
+<http://dbpedia.org/ontology/Person> owl:equivalentClass ex:Person .
+# 
+# http://dbpedia.org/page/Film_Director
+
+<http://dbpedia.org/page/Film_Director> owl:equivalentClass ex:Director .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Actor
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Africa
+
+ex:Africa owl:equivalentClass <http://www.movieontology.org/2009/10/01/movieontology.owl#Africa> .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Asia
+
+ex:Asia owl:equivalentClass <http://www.movieontology.org/2009/10/01/movieontology.owl#Asia> .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Director
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Earth
+
+ex:Earth owl:equivalentClass <http://www.movieontology.org/2009/10/01/movieontology.owl#Territory> .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Europe
+
+ex:Europe owl:equivalentClass <http://www.movieontology.org/2009/10/01/movieontology.owl#Europe> .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Film_Location
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Genre
+
+ex:Genre owl:equivalentClass <http://www.movieontology.org/2009/10/01/movieontology.owl#Genre> .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Movie
+
+ex:Movie owl:equivalentClass <http://www.movieontology.org/2009/11/09/Movie> .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/North_America
+
+ex:North_America owl:equivalentClass <http://www.movieontology.org/2009/10/01/movieontology.owl#Northern_America> .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Oceania
+
+ex:Oceania owl:equivalentClass <http://www.movieontology.org/2009/10/01/movieontology.owl#Oceania> .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Person
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/South_America
+
+ex:South_America owl:equivalentClass <http://www.movieontology.org/2009/10/01/movieontology.owl#South_America> .
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#Africa
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#Asia
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#Europe
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#Genre
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#Northern_America
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#Oceania
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#South_America
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#Territory
+# 
+# http://www.movieontology.org/2009/11/09/Movie
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://data.linkedmdb.org/resource/film_genre/11
+
+<http://data.linkedmdb.org/resource/film_genre/11> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Musical_Entertainment> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/12
+
+<http://data.linkedmdb.org/resource/film_genre/12> owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#War> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/13
+
+<http://data.linkedmdb.org/resource/film_genre/13> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Imaginational_Entertainment> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/14
+
+<http://data.linkedmdb.org/resource/film_genre/14> owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Western> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/15
+
+<http://data.linkedmdb.org/resource/film_genre/15> owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Family> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/17
+
+<http://data.linkedmdb.org/resource/film_genre/17> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Fun> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/18
+
+<http://data.linkedmdb.org/resource/film_genre/18> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Thrilling> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/19
+
+<http://data.linkedmdb.org/resource/film_genre/19> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Brute_Action> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/2
+
+<http://data.linkedmdb.org/resource/film_genre/2> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Sensible> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/23
+
+<http://data.linkedmdb.org/resource/film_genre/23> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Sensible> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/25
+
+<http://data.linkedmdb.org/resource/film_genre/25> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Kids> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/27
+
+<http://data.linkedmdb.org/resource/film_genre/27> owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Romance> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/28
+
+<http://data.linkedmdb.org/resource/film_genre/28> owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Mystery> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/30
+
+<http://data.linkedmdb.org/resource/film_genre/30> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Entertaining_Information> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/31
+
+<http://data.linkedmdb.org/resource/film_genre/31> owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Adventure> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/33
+
+<http://data.linkedmdb.org/resource/film_genre/33> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Brute_Action> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/35
+
+<http://data.linkedmdb.org/resource/film_genre/35> a <http://www.movieontology.org/2009/10/01/movieontology.owl#SciFi_and_Fantasy> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/37
+
+<http://data.linkedmdb.org/resource/film_genre/37> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Kids> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/4
+
+<http://data.linkedmdb.org/resource/film_genre/4> owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Drama> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/45
+
+<http://data.linkedmdb.org/resource/film_genre/45> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Sensible> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/47
+
+<http://data.linkedmdb.org/resource/film_genre/47> owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Action> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/49
+
+<http://data.linkedmdb.org/resource/film_genre/49> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Thrilling> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/53
+
+<http://data.linkedmdb.org/resource/film_genre/53> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Heavy_Sensible> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/54
+
+<http://data.linkedmdb.org/resource/film_genre/54> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Actionreach> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/57
+
+<http://data.linkedmdb.org/resource/film_genre/57> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Imaginational_Entertainment> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/7
+
+<http://data.linkedmdb.org/resource/film_genre/7> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Heavy_Sensible> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/8
+
+<http://data.linkedmdb.org/resource/film_genre/8> a <http://www.movieontology.org/2009/10/01/movieontology.owl#Old_Action> .
+# 
+# http://data.linkedmdb.org/resource/film_genre/9
+
+<http://data.linkedmdb.org/resource/film_genre/9> owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Musical> ;
+	<http://data.linkedmdb.org/resource/movie/genre_name> "Musical" .
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#Action
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#Adventure
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#Drama
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#Family
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#Musical
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#Mystery
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#Romance
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#War
+# 
+# http://www.movieontology.org/2009/10/01/movieontology.owl#Western
+# 
+# Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi
