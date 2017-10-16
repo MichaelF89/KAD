@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="http://www.geonames.org/ontology/mappings" uri="http://www.geonames.org/ontology/mappings_v3.01.rdf"/>
-    <uri id="Imports Wizard Entry" name="http://www.geonames.org/ontology" uri="http://www.geonames.org/ontology/ontology_v3.1.rdf"/>
-    <uri id="Imports Wizard Entry" name="http://www.geonames.org/ontology" uri="file:/C:/Users/micha/Documents/UvA/KnowledgeData/Eindopdracht/ontology_v3.0.1.rdf"/>
-    <uri id="Imports Wizard Entry" name="http://www.geonames.org/ontology/mappings" uri="file:/C:/Users/micha/Documents/UvA/KnowledgeData/Eindopdracht/mappings_v3.01.rdf"/>
-    <uri id="Imports Wizard Entry" name="http://www.geonames.org/ontology" uri="file:/C:/Users/micha/Documents/UvA/KnowledgeData/Eindopdracht/ontology_v3.1.rdf"/>
-    <uri id="Imports Wizard Entry" name="http://www.geonames.org/ontology" uri="http://www.geonames.org/ontology/ontology_v3.1.rdf"/>
-    <uri id="Imports Wizard Entry" name="http://wikiba.se/ontology#" uri="http://wikiba.se/ontology-1.0.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
 </catalog>
