@@ -1,112 +1,322 @@
 @prefix : <http://www.example.org/KnowledgeData/FinalAssignment/> .
-@prefix ex: <http://www.example.org/KnowledgeData/FinalAssignment/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.example.org/KnowledgeData/FinalAssignment/> .
 
-<http://www.example.org/KnowledgeData/FinalAssignment/> rdf:type owl:Ontology .
+<http://www.example.org/KnowledgeData/FinalAssignment/> a owl:Ontology .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Film_Location
 
-#################################################################
-#    Object Properties
-#################################################################
+:Film_Location a owl:ObjectProperty ;
+	owl:inverseOf :is_Film_Location_of .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/directed
 
-###  http://www.example.org/KnowledgeData/FinalAssignment/directed
-ex:directed rdf:type owl:ObjectProperty .
+:directed a owl:ObjectProperty .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/has_Genre
 
+:has_Genre a owl:ObjectProperty .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/is_City_in
 
-###  http://www.example.org/KnowledgeData/FinalAssignment/film_location
-ex:film_location rdf:type owl:ObjectProperty .
+:is_City_in a owl:ObjectProperty .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/is_Film_Location_of
 
+:is_Film_Location_of a owl:ObjectProperty .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/is_in
 
-###  http://www.example.org/KnowledgeData/FinalAssignment/has_Genre
-ex:has_Genre rdf:type owl:ObjectProperty .
+:is_in a owl:ObjectProperty .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/plays_role_in
 
+:plays_role_in a owl:ObjectProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/movie_year
 
-###  http://www.example.org/KnowledgeData/FinalAssignment/is_in
-ex:is_in rdf:type owl:ObjectProperty ,
-                  owl:TransitiveProperty .
+:movie_year a owl:DatatypeProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Actor
 
+:Actor a owl:Class ;
+	owl:equivalentClass _:genid1 .
 
-###  http://www.example.org/KnowledgeData/FinalAssignment/plays_role_in
-ex:plays_role_in rdf:type owl:ObjectProperty .
+_:genid1 owl:intersectionOf _:genid4 .
 
+_:genid4 a rdf:List ;
+	rdf:first :Person ;
+	rdf:rest _:genid2 .
 
-#################################################################
-#    Data properties
-#################################################################
+_:genid2 a rdf:List ;
+	rdf:first _:genid3 .
 
-###  http://www.example.org/KnowledgeData/FinalAssignment/movie_year
-ex:movie_year rdf:type owl:DatatypeProperty .
+_:genid3 a owl:Restriction ;
+	owl:onProperty :plays_role_in ;
+	owl:someValuesFrom :Movie .
 
+_:genid2 rdf:rest rdf:nil .
 
-#################################################################
-#    Classes
-#################################################################
+_:genid1 a owl:Class .
 
-###  http://www.example.org/KnowledgeData/FinalAssignment/Actor
-ex:Actor rdf:type owl:Class ;
-         owl:equivalentClass [ owl:intersectionOf ( ex:Person
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty ex:plays_role_in ;
-                                                      owl:someValuesFrom ex:Movie
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-         rdfs:subClassOf ex:Person .
+:Actor rdfs:subClassOf :Person ;
+	rdfs:label "Acteur"@nl , "Actor"@en .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Africa
 
+:Africa a owl:Class ;
+	rdfs:subClassOf :Earth ;
+	rdfs:label "Africa"@en , "Afrika"@nl .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Antarctica
 
-###  http://www.example.org/KnowledgeData/FinalAssignment/Continent
-ex:Continent rdf:type owl:Class .
+:Antarctica a owl:Class ;
+	rdfs:subClassOf :Earth ;
+	rdfs:label "Antarctica"@en , "Antarctica"@nl .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Asia
 
+:Asia a owl:Class ;
+	rdfs:subClassOf :Earth ;
+	rdfs:label "Asia"@en , "Azië"@nl .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Australia
 
-###  http://www.example.org/KnowledgeData/FinalAssignment/Country
-ex:Country rdf:type owl:Class ;
-           rdfs:subClassOf ex:Continent .
+:Australia a owl:Class ;
+	rdfs:subClassOf :Earth ;
+	rdfs:label "Australia"@en , "Australië"@nl .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/City
 
+:City a owl:Class ;
+	owl:equivalentClass _:genid5 .
 
-###  http://www.example.org/KnowledgeData/FinalAssignment/Director
-ex:Director rdf:type owl:Class ;
-            owl:equivalentClass [ owl:intersectionOf ( ex:Person
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty ex:directed ;
-                                                         owl:someValuesFrom ex:Movie
-                                                       ]
-                                                     ) ;
-                                  rdf:type owl:Class
-                                ] ;
-            rdfs:subClassOf ex:Person .
+_:genid5 a owl:Restriction ;
+	owl:onProperty :is_City_in ;
+	owl:someValuesFrom :Earth .
 
+:City rdfs:label "City"@en , "Stad"@nl .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Director
 
-###  http://www.example.org/KnowledgeData/FinalAssignment/Genre
-ex:Genre rdf:type owl:Class .
+:Director a owl:Class ;
+	owl:equivalentClass _:genid6 .
 
+_:genid6 owl:intersectionOf _:genid9 .
 
-###  http://www.example.org/KnowledgeData/FinalAssignment/Location
-ex:Location rdf:type owl:Class ;
-            rdfs:subClassOf ex:Place .
+_:genid9 a rdf:List ;
+	rdf:first :Person ;
+	rdf:rest _:genid7 .
 
+_:genid7 a rdf:List ;
+	rdf:first _:genid8 .
 
-###  http://www.example.org/KnowledgeData/FinalAssignment/Movie
-ex:Movie rdf:type owl:Class .
+_:genid8 a owl:Restriction ;
+	owl:onProperty :directed ;
+	owl:someValuesFrom :Movie .
 
+_:genid7 rdf:rest rdf:nil .
 
-###  http://www.example.org/KnowledgeData/FinalAssignment/MovieLocation
-ex:MovieLocation rdf:type owl:Class ;
-                 rdfs:subClassOf ex:Location ,
-                                 ex:Movie .
+_:genid6 a owl:Class .
 
+:Director rdfs:subClassOf :Person ;
+	rdfs:label "Director"@en , "Regisseur"@nl .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Earth
 
-###  http://www.example.org/KnowledgeData/FinalAssignment/Person
-ex:Person rdf:type owl:Class .
+:Earth a owl:Class ;
+	rdfs:label "Aarde"@nl , "Earth"@en .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Europe
 
+:Europe a owl:Class ;
+	rdfs:subClassOf :Earth ;
+	rdfs:label "Europa"@nl , "Europe"@en .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Film_Location
 
-###  http://www.example.org/KnowledgeData/FinalAssignment/Place
-ex:Place rdf:type owl:Class ;
-         rdfs:subClassOf ex:Country .
+:Film_Location a owl:Class ;
+	owl:equivalentClass _:genid10 .
 
+_:genid10 owl:intersectionOf _:genid17 .
 
-###  Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi
+_:genid17 a rdf:List ;
+	rdf:first _:genid18 .
+
+_:genid18 a owl:Class ;
+	owl:unionOf _:genid21 .
+
+_:genid21 a rdf:List ;
+	rdf:first _:genid22 .
+
+_:genid22 a owl:Restriction ;
+	owl:onProperty :is_Film_Location_of ;
+	owl:someValuesFrom :Movie .
+
+_:genid21 rdf:rest _:genid19 .
+
+_:genid19 a rdf:List ;
+	rdf:first _:genid20 .
+
+_:genid20 a owl:Restriction ;
+	owl:onProperty :is_Film_Location_of ;
+	owl:someValuesFrom :Scene .
+
+_:genid19 rdf:rest rdf:nil .
+
+_:genid17 rdf:rest _:genid11 .
+
+_:genid11 a rdf:List ;
+	rdf:first _:genid12 .
+
+_:genid12 a owl:Class ;
+	owl:unionOf _:genid15 .
+
+_:genid15 a rdf:List ;
+	rdf:first _:genid16 .
+
+_:genid16 a owl:Restriction ;
+	owl:onProperty :is_in ;
+	owl:someValuesFrom :City .
+
+_:genid15 rdf:rest _:genid13 .
+
+_:genid13 a rdf:List ;
+	rdf:first _:genid14 .
+
+_:genid14 a owl:Restriction ;
+	owl:onProperty :is_in ;
+	owl:someValuesFrom :Earth .
+
+_:genid13 rdf:rest rdf:nil .
+
+_:genid11 rdf:rest rdf:nil .
+
+_:genid10 a owl:Class .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Genre
+
+:Genre a owl:Class ;
+	rdfs:label "Genre"@en , "Genre"@nl .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Movie
+
+:Movie a owl:Class ;
+	rdfs:label "Film"@nl , "Movie"@en .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/North_America
+
+:North_America a owl:Class ;
+	rdfs:subClassOf :Earth ;
+	rdfs:label "Noord-Amerika"@nl , "North America"@en .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Oceania
+
+:Oceania a owl:Class ;
+	rdfs:subClassOf :Earth ;
+	rdfs:label "Oceania"@en , "Oceanië"@nl .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Person
+
+:Person a owl:Class ;
+	rdfs:label "Person"@en , "Persoon"@nl .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/Scene
+
+:Scene a owl:Class ;
+	rdfs:subClassOf :Movie ;
+	rdfs:label "Scene"@en , "Scene"@nl .
+# 
+# http://www.example.org/KnowledgeData/FinalAssignment/South_America
+
+:South_America a owl:Class ;
+	rdfs:subClassOf :Earth ;
+	rdfs:label "South America"@en , "Zuid-Amerika"@nl .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+
+:Film_Location rdfs:label "Film Locatie"@nl , "Film Location"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+
+_:genid23 a owl:AllDisjointClasses ;
+	owl:members _:genid31 .
+
+_:genid31 a rdf:List ;
+	rdf:first :Africa ;
+	rdf:rest _:genid30 .
+
+_:genid30 a rdf:List ;
+	rdf:first :Antarctica ;
+	rdf:rest _:genid29 .
+
+_:genid29 a rdf:List ;
+	rdf:first :Asia ;
+	rdf:rest _:genid28 .
+
+_:genid28 a rdf:List ;
+	rdf:first :Australia ;
+	rdf:rest _:genid27 .
+
+_:genid27 a rdf:List ;
+	rdf:first :Europe ;
+	rdf:rest _:genid26 .
+
+_:genid26 a rdf:List ;
+	rdf:first :North_America ;
+	rdf:rest _:genid25 .
+
+_:genid25 a rdf:List ;
+	rdf:first :Oceania ;
+	rdf:rest _:genid24 .
+
+_:genid24 a rdf:List ;
+	rdf:first :South_America ;
+	rdf:rest rdf:nil .
+# 
+# Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi
