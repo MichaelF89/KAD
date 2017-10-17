@@ -1,0 +1,86 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX movie: <http://data.linkedmdb.org/resource/movie/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+CONSTRUCT { 
+  
+# Construct Classes
+  movie:film rdf:type owl:Class .
+  movie:actor rdf:type owl:Class .
+  movie:director rdf:type owl:Class .
+  movie:film_location rdf:type owl:Class .
+  movie:film_genre rdf:type owl:Class .
+ 
+# Construct Object Properties
+  movie:has_actor rdf:type owl:ObjectProperty .
+  movie:has_director rdf:type owl:ObjectProperty .
+  movie:genre rdf:type owl:ObjectProperty .
+  movie:featured_film_location rdf:type owl:ObjectProperty .
+  
+# Construct Data Properties
+  movie:initial_release_date rdf:type owl:DataProperty .
+  movie:runtime rdf:type owl:DataProperty .
+  movie:actor_name rdf:type owl:DataProperty .
+  movie:director_name rdf:type owl:DataProperty .
+  movie:film_location_name rdf:type owl:DataProperty .
+  movie:film_genre_name rdf:type owl:DataProperty .
+  
+# Construct instances Movie
+?movie rdf:type movie:film, owl:NamedIndividual ;
+	movie:has_actor ?actor ;
+    movie:featured_film_location ?location ;
+    rdfs:label ?movielabel ;
+    movie:initial_release_date ?date ;
+    movie:genre ?genre ;
+    movie:has_director ?director ;
+    owl:sameAs ?mlink ;
+	movie:runtime ?runtime.    
+    
+  
+# Construct instances Actor
+?actor rdf:type movie:actor, owl:NamedIndividual ;
+    movie:actor_name ?nactor ;
+	owl:sameAs ?alink.
+ 
+# Construct instances Director
+?director rdf:type movie:director, owl:NamedIndividual ;
+    movie:director_name ?ndirector ;
+	owl:sameAs ?dlink.
+  
+# Construct instances Film_Location
+?location rdf:type movie:film_location, owl:NamedIndividual ;
+    movie:film_location_name ?nlocation .
+
+# Construct instances Genre
+?genre rdf:type movie:film_genre, owl:NamedIndividual ;
+    movie:genre_name ?ngenre .  
+}
+
+WHERE {
+
+# Movie
+  ?movie rdf:type movie:film ;
+         movie:actor ?actor ;
+         movie:featured_film_location ?location ;
+         rdfs:label ?movielabel ;
+         movie:initial_release_date ?date .
+  OPTIONAL { ?movie owl:sameAs ?mlink.}
+  OPTIONAL { ?movie movie:runtime ?runtime.}
+  
+# Actor
+  ?actor movie:actor_name ?nactor .
+  OPTIONAL { ?actor owl:sameAs ?alink.}
+  
+# Director
+  OPTIONAL { ?movie movie:director ?director.
+			 ?director movie:director_name ?ndirector.
+  OPTIONAL { ?director owl:sameAs ?dlink. } }
+  
+# Location
+  ?location movie:film_location_name ?nlocation .
+
+# Genre
+  OPTIONAL { ?movie movie:genre ?genre.
+			 ?genre movie:film_genre_name ?ngenre. }
+} 
