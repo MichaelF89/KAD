@@ -29,11 +29,6 @@
 :has_Genre a owl:ObjectProperty ;
 	owl:inverseOf :is_Genre_of .
 # 
-# http://www.example.org/KnowledgeData/FinalAssignment/has_Scene
-
-:has_Scene a owl:ObjectProperty ;
-	owl:inverseOf :is_Scene_from .
-# 
 # http://www.example.org/KnowledgeData/FinalAssignment/is_City_in
 
 :is_City_in a owl:ObjectProperty .
@@ -45,10 +40,6 @@
 # http://www.example.org/KnowledgeData/FinalAssignment/is_Genre_of
 
 :is_Genre_of a owl:ObjectProperty .
-# 
-# http://www.example.org/KnowledgeData/FinalAssignment/is_Scene_from
-
-:is_Scene_from a owl:ObjectProperty .
 # 
 # http://www.example.org/KnowledgeData/FinalAssignment/is_in
 
@@ -265,13 +256,7 @@ _:genid10 a owl:Class .
 # http://www.example.org/KnowledgeData/FinalAssignment/Scene
 
 :Scene a owl:Class ;
-	owl:equivalentClass _:genid19 .
-
-_:genid19 a owl:Restriction ;
-	owl:onProperty :is_Scene_from ;
-	owl:someValuesFrom :Movie .
-
-:Scene rdfs:subClassOf :Movie ;
+	rdfs:subClassOf :Movie ;
 	rdfs:label "Scene"@en , "Scene"@nl .
 # 
 # http://www.example.org/KnowledgeData/FinalAssignment/South_America
@@ -290,34 +275,34 @@ _:genid19 a owl:Restriction ;
 # 
 # 
 
-_:genid20 a owl:AllDisjointClasses ;
-	owl:members _:genid27 .
-
-_:genid27 a rdf:List ;
-	rdf:first :Africa ;
-	rdf:rest _:genid26 .
+_:genid19 a owl:AllDisjointClasses ;
+	owl:members _:genid26 .
 
 _:genid26 a rdf:List ;
-	rdf:first :Antarctica ;
+	rdf:first :Africa ;
 	rdf:rest _:genid25 .
 
 _:genid25 a rdf:List ;
-	rdf:first :Asia ;
+	rdf:first :Antarctica ;
 	rdf:rest _:genid24 .
 
 _:genid24 a rdf:List ;
-	rdf:first :Europe ;
+	rdf:first :Asia ;
 	rdf:rest _:genid23 .
 
 _:genid23 a rdf:List ;
-	rdf:first :North_America ;
+	rdf:first :Europe ;
 	rdf:rest _:genid22 .
 
 _:genid22 a rdf:List ;
-	rdf:first :Oceania ;
+	rdf:first :North_America ;
 	rdf:rest _:genid21 .
 
 _:genid21 a rdf:List ;
+	rdf:first :Oceania ;
+	rdf:rest _:genid20 .
+
+_:genid20 a rdf:List ;
 	rdf:first :South_America ;
 	rdf:rest rdf:nil .
 # 
