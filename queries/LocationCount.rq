@@ -1,0 +1,11 @@
+# Query for retrieving unique film locations with the number of movies they are in.
+# ENDPOINT <http://data.linkedmdb.org/sparql> or <http://localhost:5820/LMDB/query> (local)
+
+PREFIX movie: <http://data.linkedmdb.org/resource/movie/>
+
+SELECT ?nloc (COUNT(?mov) AS ?movcount) WHERE {
+  ?mov movie:featured_film_location ?loc .
+  ?loc     movie:film_location_name ?nloc .
+}
+GROUP BY ?nloc
+ORDER BY DESC (?movcount)
