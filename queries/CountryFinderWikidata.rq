@@ -1,0 +1,13 @@
+#ENDPOINT <https://query.wikidata.org/sparql>
+# The {val} variables are goint to be replaced by country names from the movie ontology
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?country WHERE {{
+  ?country ( rdfs:label | skos:altLabel ) "{val}"@en .
+	FILTER EXISTS {{ ?country ^wdt:P17 ?o .}}
+	FILTER NOT EXISTS {{?country wdt:P31 wd:Q3024240 .}}
+  }}

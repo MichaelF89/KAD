@@ -1,0 +1,6 @@
+#ENPOINT <http://localhost:5820/LMDB/query> or <http://data.linkedmdb.org/sparql>
+PREFIX movie: <http://data.linkedmdb.org/resource/movie/>
+			
+SELECT DISTINCT ?loc ?name WHERE {
+	?mov movie:featured_film_location ?local .
+		?loc movie:film_location_name ?name . }

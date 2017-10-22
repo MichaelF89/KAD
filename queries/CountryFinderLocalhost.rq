@@ -1,0 +1,8 @@
+#ENDPOINT <http://localhost:5820/KaDmerge/query>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX movieontology: <http://www.movieontology.org/2009/10/01/movieontology.owl#>
+
+SELECT ?country WHERE {{
+  ?country rdf:type/rdfs:subClassOf* movieontology:Territory .
+  }}
