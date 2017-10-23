@@ -18,13 +18,13 @@ CONSTRUCT {
   movie:genre rdf:type owl:ObjectProperty .
   movie:featured_film_location rdf:type owl:ObjectProperty .
   
-# Construct Data Properties
-  movie:initial_release_date rdf:type owl:DataProperty .
-  movie:runtime rdf:type owl:DataProperty .
-  movie:actor_name rdf:type owl:DataProperty .
-  movie:director_name rdf:type owl:DataProperty .
-  movie:film_location_name rdf:type owl:DataProperty .
-  movie:film_genre_name rdf:type owl:DataProperty .
+# Construct Datatype Properties
+  movie:initial_release_date rdf:type owl:DatatypeProperty .
+  movie:runtime rdf:type owl:DatatypeProperty .
+  movie:actor_name rdf:type owl:DatatypeProperty .
+  movie:director_name rdf:type owl:DatatypeProperty .
+  movie:film_location_name rdf:type owl:DatatypeProperty .
+  movie:film_genre_name rdf:type owl:DatatypeProperty .
   
 # Construct instances Movie
 ?movie rdf:type movie:film, owl:NamedIndividual ;
