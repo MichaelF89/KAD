@@ -138,33 +138,52 @@ _:genid1 a owl:Class .
 :City a owl:Class ;
 	owl:equivalentClass _:genid5 .
 
-_:genid5 a owl:Restriction ;
+_:genid5 a owl:Class ;
+	owl:unionOf _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first _:genid9 .
+
+_:genid9 a owl:Restriction ;
 	owl:onProperty :is_City_in ;
 	owl:someValuesFrom :Earth .
+
+_:genid8 rdf:rest _:genid6 .
+
+_:genid6 a rdf:List ;
+	rdf:first _:genid7 .
+
+_:genid7 a owl:Restriction ;
+	owl:onProperty :is_City_in ;
+	owl:someValuesFrom :Region .
+
+:Region a owl:Class .
+
+_:genid6 rdf:rest rdf:nil .
 
 :City rdfs:label "City"@en , "Stad"@nl .
 # 
 # http://www.example.org/KnowledgeData/FinalAssignment/Director
 
 :Director a owl:Class ;
-	owl:equivalentClass _:genid6 .
+	owl:equivalentClass _:genid10 .
 
-_:genid6 owl:intersectionOf _:genid9 .
+_:genid10 owl:intersectionOf _:genid13 .
 
-_:genid9 a rdf:List ;
+_:genid13 a rdf:List ;
 	rdf:first :Person ;
-	rdf:rest _:genid7 .
+	rdf:rest _:genid11 .
 
-_:genid7 a rdf:List ;
-	rdf:first _:genid8 .
+_:genid11 a rdf:List ;
+	rdf:first _:genid12 .
 
-_:genid8 a owl:Restriction ;
+_:genid12 a owl:Restriction ;
 	owl:onProperty :directed ;
 	owl:someValuesFrom :Movie .
 
-_:genid7 rdf:rest rdf:nil .
+_:genid11 rdf:rest rdf:nil .
 
-_:genid6 a owl:Class .
+_:genid10 a owl:Class .
 
 :Director rdfs:subClassOf :Person ;
 	rdfs:label "Director"@en , "Regisseur"@nl .
@@ -183,22 +202,33 @@ _:genid6 a owl:Class .
 # http://www.example.org/KnowledgeData/FinalAssignment/Film_Location
 
 :Film_Location a owl:Class ;
-	owl:equivalentClass _:genid10 .
+	owl:equivalentClass _:genid14 .
 
-_:genid10 owl:intersectionOf _:genid13 .
-
-_:genid13 a rdf:List ;
-	rdf:first _:genid14 .
-
-_:genid14 a owl:Class ;
-	owl:unionOf _:genid17 .
+_:genid14 owl:intersectionOf _:genid17 .
 
 _:genid17 a rdf:List ;
 	rdf:first _:genid18 .
 
-_:genid18 a owl:Restriction ;
+_:genid18 a owl:Class ;
+	owl:unionOf _:genid21 .
+
+_:genid21 a rdf:List ;
+	rdf:first _:genid22 .
+
+_:genid22 a owl:Restriction ;
 	owl:onProperty :is_in ;
 	owl:someValuesFrom :City .
+
+_:genid21 rdf:rest _:genid19 .
+
+_:genid19 a rdf:List ;
+	rdf:first _:genid20 .
+
+_:genid20 a owl:Restriction ;
+	owl:onProperty :is_in ;
+	owl:someValuesFrom :Earth .
+
+_:genid19 rdf:rest rdf:nil .
 
 _:genid17 rdf:rest _:genid15 .
 
@@ -206,23 +236,12 @@ _:genid15 a rdf:List ;
 	rdf:first _:genid16 .
 
 _:genid16 a owl:Restriction ;
-	owl:onProperty :is_in ;
-	owl:someValuesFrom :Earth .
-
-_:genid15 rdf:rest rdf:nil .
-
-_:genid13 rdf:rest _:genid11 .
-
-_:genid11 a rdf:List ;
-	rdf:first _:genid12 .
-
-_:genid12 a owl:Restriction ;
 	owl:onProperty :is_Film_Location_of ;
 	owl:someValuesFrom :Movie .
 
-_:genid11 rdf:rest rdf:nil .
+_:genid15 rdf:rest rdf:nil .
 
-_:genid10 a owl:Class .
+_:genid14 a owl:Class .
 
 :Film_Location rdfs:label "Film Locatie"@nl , "Film Location"@en .
 # 
@@ -253,6 +272,8 @@ _:genid10 a owl:Class .
 :Person a owl:Class ;
 	rdfs:label "Person"@en , "Persoon"@nl .
 # 
+# http://www.example.org/KnowledgeData/FinalAssignment/Region
+# 
 # http://www.example.org/KnowledgeData/FinalAssignment/Scene
 
 :Scene a owl:Class ;
@@ -275,34 +296,34 @@ _:genid10 a owl:Class .
 # 
 # 
 
-_:genid19 a owl:AllDisjointClasses ;
-	owl:members _:genid26 .
+_:genid23 a owl:AllDisjointClasses ;
+	owl:members _:genid30 .
+
+_:genid30 a rdf:List ;
+	rdf:first :Africa ;
+	rdf:rest _:genid29 .
+
+_:genid29 a rdf:List ;
+	rdf:first :Antarctica ;
+	rdf:rest _:genid28 .
+
+_:genid28 a rdf:List ;
+	rdf:first :Asia ;
+	rdf:rest _:genid27 .
+
+_:genid27 a rdf:List ;
+	rdf:first :Europe ;
+	rdf:rest _:genid26 .
 
 _:genid26 a rdf:List ;
-	rdf:first :Africa ;
+	rdf:first :North_America ;
 	rdf:rest _:genid25 .
 
 _:genid25 a rdf:List ;
-	rdf:first :Antarctica ;
+	rdf:first :Oceania ;
 	rdf:rest _:genid24 .
 
 _:genid24 a rdf:List ;
-	rdf:first :Asia ;
-	rdf:rest _:genid23 .
-
-_:genid23 a rdf:List ;
-	rdf:first :Europe ;
-	rdf:rest _:genid22 .
-
-_:genid22 a rdf:List ;
-	rdf:first :North_America ;
-	rdf:rest _:genid21 .
-
-_:genid21 a rdf:List ;
-	rdf:first :Oceania ;
-	rdf:rest _:genid20 .
-
-_:genid20 a rdf:List ;
 	rdf:first :South_America ;
 	rdf:rest rdf:nil .
 # 

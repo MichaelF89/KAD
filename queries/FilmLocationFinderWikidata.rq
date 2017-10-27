@@ -10,79 +10,83 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX bd: <http://www.bigdata.com/rdf#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-
-SELECT DISTINCT ?itemLabel ?schoolLabel ?address ?streetLabel ?number ?geo ? city ?cityLabel ?region ?regionLabel ?countryLabel 
+SELECT DISTINCT ?itemLabel ?address ?streetLabel ?number ?long ?lat ?cityLabel ?regionLabel ?countryLabel 
 WHERE 
 {{{{
 # Locaties binnen een stad/dorp muv Scholen
-		?item ( rdfs:label | skos:altLabel ) "{val}"@en ;
-		   wdt:P131* ?city ;
-		   wdt:P625 ?geo .
-		FILTER NOT EXISTS {{?item wdt:P31/wdt:P279* wd:Q2385804 .}}
-	
+        ?item ( rdfs:label | skos:altLabel ) "{val}"@en ;
+                       wdt:P131* ?city ;
+                       wdt:P625 ?geo .
+    FILTER NOT EXISTS {{?item wdt:P31/wdt:P279* wd:Q2385804 .}}
+        
+    
   ?city wdt:P31 ?settlement ;
-		wdt:P17 ?country .
-  ?settlement wdt:P279 wd:Q486972 .
-
+        wdt:P17 ?country .
+  ?settlement wdt:P279* wd:Q486972 .
+  FILTER NOT EXISTS {{?city wdt:P31/wdt:P279* wd:Q5195043 .}}
+  
   OPTIONAL
-		{{ ?item wdt:P690 ?address .}}
+        {{ ?item wdt:P690 ?address .}}
   
  OPTIONAL
   {{ ?item wdt:P669 ?street ;
-		  p:P669 ?sf .
-	?sf pq:P670 ?number .
-		  }}}}
+          p:P669 ?sf .
+    ?sf pq:P670 ?number .
+          }}}}
 UNION
 # Regio's die niet in een stad liggen 
   {{
-		?region ( rdfs:label | skos:altLabel ) "{val}"@en ;
- wdt:P17 ?country ;
- wdt:P31/wdt:P279* wd:Q15916867 ;
- wdt:P625 ?geo .
+        ?region ( rdfs:label | skos:altLabel ) "{val}"@en ;
+                         wdt:P17 ?country ;
+                         wdt:P31/wdt:P279* wd:Q15916867 ;
+                         wdt:P625 ?geo .
 #    FILTER (?region wdt:P31 wd:Q515 .)
-	FILTER (!sameTerm(?region,?country)).
-	}}
+    FILTER (!sameTerm(?region,?country)).
+    }}
 UNION
 # Landen
   {{
-		?country ( rdfs:label | skos:altLabel ) "{val}"@en ;
- wdt:P31 wd:Q6256 ;
- wdt:P625 ?geo .
-	  }}
+        ?country ( rdfs:label | skos:altLabel ) "{val}"@en ;
+                         wdt:P31 wd:Q6256 ;
+                         wdt:P625 ?geo .
+      }}
 UNION
 # Scholen hebben andere vorm van aangeven locatie
   {{
-		?school ( rdfs:label | skos:altLabel ) "{val}"@en ;
-		  wdt:P31/wdt:P279* wd:Q2385804 .
+        ?item ( rdfs:label | skos:altLabel ) "{val}"@en ;
+          wdt:P31/wdt:P279* wd:Q2385804 .
 
-  OPTIONAL {{?school wdt:P159 ?city ;
-		p:P159 ?cq .
-  ?city wdt:P31 ?settlement ;
-		wdt:P17 ?country .
-  ?settlement wdt:P279 wd:Q486972 .
-OPTIONAL {{?cq pq:P625 ?geo .}}
-OPTIONAL {{?cq pq:P969 ?address .}}
-OPTIONAL {{?cq pq:P669 ?street .}}          
-OPTIONAL {{?cq pq:P670 ?number .}}
-		  }}          
-		OPTIONAL {{?school wdt:P969 ?address .}}
-		OPTIONAL {{?school wdt:P625 ?geo .}} 
+  OPTIONAL {{?item wdt:P159 ?city ;
+                    p:P159 ?cq .
+              ?city wdt:P31 ?settlement ;
+                    wdt:P17 ?country .
+              ?settlement wdt:P279 wd:Q486972 .
+            OPTIONAL {{?cq pq:P625 ?geo .}}
+            OPTIONAL {{?cq pq:P969 ?address .}}
+            OPTIONAL {{?cq pq:P669 ?street .}}          
+            OPTIONAL {{?cq pq:P670 ?number .}}
+          }}          
+        OPTIONAL {{?item wdt:P969 ?address .}}
+        OPTIONAL {{?item wdt:P625 ?geo .}} 
   
-  OPTIONAL {{?school wdt:P669 ?street ;
-	   p:P669 ?sf .
- ?sf pq:P670 ?number .
-		  }}
-  OPTIONAL{{ ?school wdt:P131* ?city .
-?city wdt:P31 ?settlement ;
-	  wdt:P17 ?country . 
-?settlement wdt:P279 wd:Q486972 .
-		  }}
-  OPTIONAL {{ ?school wdt:P17 ?country ;
-		 wdt:P131* ?region .
- ?region wdt:P31 wd:Q35657 .
-		  }}
-	  }}
-FILTER ( ?country != "" ).
-FILTER ( isLiteral(?geo) ) .
-	SERVICE wikibase:label {{ bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }}
+  OPTIONAL {{?item wdt:P669 ?street ;
+                   p:P669 ?sf .
+             ?sf pq:P670 ?number .
+          }}
+  OPTIONAL{{ ?item wdt:P131* ?city .
+            ?city wdt:P31 ?settlement ;
+                  wdt:P17 ?country . 
+            ?settlement wdt:P279 wd:Q486972 .
+			FILTER NOT EXISTS {{?city wdt:P31/wdt:P279* wd:Q5195043 .}}
+          }}
+  OPTIONAL {{ ?item wdt:P17 ?country ;
+                     wdt:P131* ?region .
+             ?region wdt:P31 wd:Q35657 .
+          }}
+      }}
+  FILTER ( ?country != "" ).
+  FILTER ( isLiteral(?geo) ) .
+  BIND( replace( str(?geo), "^[^0-9\\.]*([0-9\\.]+) .*$", "$1" ) as ?long )
+  BIND( replace( str(?geo), "^.* ([0-9\\.]+)[^0-9\\.]*$", "$1" ) as ?lat )
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
   }}

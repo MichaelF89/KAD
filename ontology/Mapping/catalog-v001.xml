@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://data.linkedmdb.org/resource/movie.owl" uri="movie.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.movieontology.org/2009/11/09/movieontology.owl" uri="https://web.archive.org/web/20111213110713/http://www.movieontology.org:80/2010/01/movieontology.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.example.org/KnowledgeData/FinalAssignment/" uri="ontology.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>

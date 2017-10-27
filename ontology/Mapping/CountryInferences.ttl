@@ -1,0 +1,1168 @@
+@prefix movieontology: <http://www.movieontology.org/2009/10/01/movieontology.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+movieontology:Afghanistan a owl:NamedIndividual ;
+    owl:sameAs wd:Q889 .
+
+movieontology:Albania a owl:NamedIndividual ;
+    owl:sameAs wd:Q222 .
+
+movieontology:Algeria a owl:NamedIndividual ;
+    owl:sameAs wd:Q262 .
+
+movieontology:American_Samoa a owl:NamedIndividual ;
+    owl:sameAs wd:Q16641 .
+
+movieontology:Andorra a owl:NamedIndividual ;
+    owl:sameAs wd:Q228 .
+
+movieontology:Angola a owl:NamedIndividual ;
+    owl:sameAs wd:Q916 .
+
+movieontology:Anguilla a owl:NamedIndividual ;
+    owl:sameAs wd:Q25228 .
+
+movieontology:Antigua_and_Barbuda a owl:NamedIndividual ;
+    owl:sameAs wd:Q781 .
+
+movieontology:Argentina a owl:NamedIndividual ;
+    owl:sameAs wd:Q414 .
+
+movieontology:Armenia a owl:NamedIndividual ;
+    owl:sameAs wd:Q399 .
+
+movieontology:Aruba a owl:NamedIndividual ;
+    owl:sameAs wd:Q21203 .
+
+movieontology:Australia a owl:NamedIndividual ;
+    owl:sameAs wd:Q408 .
+
+movieontology:Austria a owl:NamedIndividual ;
+    owl:sameAs wd:Q40,
+        wd:Q533534 .
+
+movieontology:Azerbaijan a owl:NamedIndividual ;
+    owl:sameAs wd:Q227 .
+
+movieontology:Bahamas a owl:NamedIndividual ;
+    owl:sameAs wd:Q778 .
+
+movieontology:Bahrain a owl:NamedIndividual ;
+    owl:sameAs wd:Q398 .
+
+movieontology:Bangladesh a owl:NamedIndividual ;
+    owl:sameAs wd:Q902 .
+
+movieontology:Barbados a owl:NamedIndividual ;
+    owl:sameAs wd:Q244 .
+
+movieontology:Belarus a owl:NamedIndividual ;
+    owl:sameAs wd:Q184 .
+
+movieontology:Belgium a owl:NamedIndividual ;
+    owl:sameAs wd:Q31 .
+
+movieontology:Belize a owl:NamedIndividual ;
+    owl:sameAs wd:Q242 .
+
+movieontology:Benin a owl:NamedIndividual ;
+    owl:sameAs wd:Q962 .
+
+movieontology:Bermuda a owl:NamedIndividual ;
+    owl:sameAs wd:Q23635 .
+
+movieontology:Bhutan a owl:NamedIndividual ;
+    owl:sameAs wd:Q917 .
+
+movieontology:Bolivia a owl:NamedIndividual ;
+    owl:sameAs wd:Q750 .
+
+movieontology:Bosnia-Herzegovina a owl:NamedIndividual ;
+    owl:sameAs wd:Q225 .
+
+movieontology:Botswana a owl:NamedIndividual ;
+    owl:sameAs wd:Q963 .
+
+movieontology:Brazil a owl:NamedIndividual ;
+    owl:sameAs wd:Q155 .
+
+movieontology:British_Virgin_Islands a owl:NamedIndividual ;
+    owl:sameAs wd:Q25305 .
+
+movieontology:Brunei_Darussalam a owl:NamedIndividual ;
+    owl:sameAs wd:Q921 .
+
+movieontology:Bulgaria a owl:NamedIndividual ;
+    owl:sameAs wd:Q219 .
+
+movieontology:Burkina_Faso a owl:NamedIndividual ;
+    owl:sameAs wd:Q965 .
+
+movieontology:Burundi a owl:NamedIndividual ;
+    owl:sameAs wd:Q967 .
+
+movieontology:Cambodia a owl:NamedIndividual ;
+    owl:sameAs wd:Q424 .
+
+movieontology:Cameroon a owl:NamedIndividual ;
+    owl:sameAs wd:Q1009 .
+
+movieontology:Canada a owl:NamedIndividual ;
+    owl:sameAs wd:Q16 .
+
+movieontology:Cape_Verde a owl:NamedIndividual ;
+    owl:sameAs wd:Q1011 .
+
+movieontology:Cayman_Islands a owl:NamedIndividual ;
+    owl:sameAs wd:Q5785 .
+
+movieontology:Central_African_Republic a owl:NamedIndividual ;
+    owl:sameAs wd:Q929 .
+
+movieontology:Chad a owl:NamedIndividual ;
+    owl:sameAs wd:Q657 .
+
+movieontology:Channel_Islands a owl:NamedIndividual ;
+    owl:sameAs wd:Q42314 .
+
+movieontology:Chile a owl:NamedIndividual ;
+    owl:sameAs wd:Q298 .
+
+movieontology:China a owl:NamedIndividual ;
+    owl:sameAs wd:Q148,
+        wd:Q29520 .
+
+movieontology:Colombia a owl:NamedIndividual ;
+    owl:sameAs wd:Q739 .
+
+movieontology:Comoros a owl:NamedIndividual ;
+    owl:sameAs wd:Q970 .
+
+movieontology:Congo a owl:NamedIndividual ;
+    owl:sameAs wd:Q664,
+        wd:Q974 .
+
+movieontology:Cook_Islands a owl:NamedIndividual ;
+    owl:sameAs wd:Q26988 .
+
+movieontology:Costa_Rica a owl:NamedIndividual ;
+    owl:sameAs wd:Q800 .
+
+movieontology:Croatia a owl:NamedIndividual ;
+    owl:sameAs wd:Q224 .
+
+movieontology:Cuba a owl:NamedIndividual ;
+    owl:sameAs wd:Q241 .
+
+movieontology:Cyprus a owl:NamedIndividual ;
+    owl:sameAs wd:Q229,
+        wd:Q644636 .
+
+movieontology:Czech_Republic a owl:NamedIndividual ;
+    owl:sameAs wd:Q213 .
+
+movieontology:Denmark a owl:NamedIndividual ;
+    owl:sameAs wd:Q35,
+        wd:Q756617 .
+
+movieontology:Djibouti a owl:NamedIndividual ;
+    owl:sameAs wd:Q977 .
+
+movieontology:Dominica a owl:NamedIndividual ;
+    owl:sameAs wd:Q784 .
+
+movieontology:Dominican_Republic a owl:NamedIndividual ;
+    owl:sameAs wd:Q786 .
+
+movieontology:Ecuador a owl:NamedIndividual ;
+    owl:sameAs wd:Q736 .
+
+movieontology:Egypt a owl:NamedIndividual ;
+    owl:sameAs wd:Q202311,
+        wd:Q79 .
+
+movieontology:El_Salvador a owl:NamedIndividual ;
+    owl:sameAs wd:Q792 .
+
+movieontology:Equatorial_Guinea a owl:NamedIndividual ;
+    owl:sameAs wd:Q983 .
+
+movieontology:Eritrea a owl:NamedIndividual ;
+    owl:sameAs wd:Q986 .
+
+movieontology:Estonia a owl:NamedIndividual ;
+    owl:sameAs wd:Q191 .
+
+movieontology:Ethiopia a owl:NamedIndividual ;
+    owl:sameAs wd:Q115 .
+
+movieontology:Falkland_Islands a owl:NamedIndividual ;
+    owl:sameAs wd:Q9648 .
+
+movieontology:Faroe_Islands a owl:NamedIndividual ;
+    owl:sameAs wd:Q4628 .
+
+movieontology:Federated_States_of_Micronesia a owl:NamedIndividual ;
+    owl:sameAs wd:Q702 .
+
+movieontology:Fiji a owl:NamedIndividual ;
+    owl:sameAs wd:Q712 .
+
+movieontology:Finland a owl:NamedIndividual ;
+    owl:sameAs wd:Q33 .
+
+movieontology:France a owl:NamedIndividual ;
+    owl:sameAs wd:Q142 .
+
+movieontology:French_Guiana a owl:NamedIndividual ;
+    owl:sameAs wd:Q3769 .
+
+movieontology:French_Polynesia a owl:NamedIndividual ;
+    owl:sameAs wd:Q30971 .
+
+movieontology:Gabon a owl:NamedIndividual ;
+    owl:sameAs wd:Q1000 .
+
+movieontology:Gambia a owl:NamedIndividual ;
+    owl:sameAs wd:Q1005 .
+
+movieontology:Georgia a owl:NamedIndividual ;
+    owl:sameAs wd:Q230 .
+
+movieontology:Germany a owl:NamedIndividual ;
+    owl:sameAs wd:Q183 .
+
+movieontology:Ghana a owl:NamedIndividual ;
+    owl:sameAs wd:Q117,
+        wd:Q5555325 .
+
+movieontology:Gibraltar a owl:NamedIndividual ;
+    owl:sameAs wd:Q1410 .
+
+movieontology:Greece a owl:NamedIndividual ;
+    owl:sameAs wd:Q41 .
+
+movieontology:Greenland a owl:NamedIndividual ;
+    owl:sameAs wd:Q223 .
+
+movieontology:Grenada a owl:NamedIndividual ;
+    owl:sameAs wd:Q769 .
+
+movieontology:Guatemala a owl:NamedIndividual ;
+    owl:sameAs wd:Q774 .
+
+movieontology:Guinea a owl:NamedIndividual ;
+    owl:sameAs wd:Q1006 .
+
+movieontology:Guyana a owl:NamedIndividual ;
+    owl:sameAs wd:Q734 .
+
+movieontology:Haiti a owl:NamedIndividual ;
+    owl:sameAs wd:Q12766653,
+        wd:Q790 .
+
+movieontology:Honduras a owl:NamedIndividual ;
+    owl:sameAs wd:Q783 .
+
+movieontology:Hong_Kong a owl:NamedIndividual ;
+    owl:sameAs wd:Q1054923,
+        wd:Q8646 .
+
+movieontology:Hungary a owl:NamedIndividual ;
+    owl:sameAs wd:Q28 .
+
+movieontology:Iceland a owl:NamedIndividual ;
+    owl:sameAs wd:Q189 .
+
+movieontology:India a owl:NamedIndividual ;
+    owl:sameAs wd:Q129286,
+        wd:Q2060630,
+        wd:Q668 .
+
+movieontology:Indonesia a owl:NamedIndividual ;
+    owl:sameAs wd:Q252 .
+
+movieontology:Iran a owl:NamedIndividual ;
+    owl:sameAs wd:Q794 .
+
+movieontology:Iraq a owl:NamedIndividual ;
+    owl:sameAs wd:Q796 .
+
+movieontology:Ireland a owl:NamedIndividual ;
+    owl:sameAs wd:Q27 .
+
+movieontology:Isle_of_Man a owl:NamedIndividual ;
+    owl:sameAs wd:Q9676 .
+
+movieontology:Israel a owl:NamedIndividual ;
+    owl:sameAs wd:Q801 .
+
+movieontology:Italy a owl:NamedIndividual ;
+    owl:sameAs wd:Q38 .
+
+movieontology:Ivory_Coast a owl:NamedIndividual ;
+    owl:sameAs wd:Q1008 .
+
+movieontology:Jamaica a owl:NamedIndividual ;
+    owl:sameAs wd:Q766 .
+
+movieontology:Japan a owl:NamedIndividual ;
+    owl:sameAs wd:Q17 .
+
+movieontology:Jersey a owl:NamedIndividual ;
+    owl:sameAs wd:Q785 .
+
+movieontology:Jordan a owl:NamedIndividual ;
+    owl:sameAs wd:Q810 .
+
+movieontology:Kazakhstan a owl:NamedIndividual ;
+    owl:sameAs wd:Q232 .
+
+movieontology:Kenya a owl:NamedIndividual ;
+    owl:sameAs wd:Q114 .
+
+movieontology:Kiribati a owl:NamedIndividual ;
+    owl:sameAs wd:Q710 .
+
+movieontology:Kuwait a owl:NamedIndividual ;
+    owl:sameAs wd:Q35178,
+        wd:Q817 .
+
+movieontology:Kyrgyzstan a owl:NamedIndividual ;
+    owl:sameAs wd:Q813 .
+
+movieontology:Laos a owl:NamedIndividual ;
+    owl:sameAs wd:Q819 .
+
+movieontology:Latvia a owl:NamedIndividual ;
+    owl:sameAs wd:Q211 .
+
+movieontology:Lebanon a owl:NamedIndividual ;
+    owl:sameAs wd:Q822 .
+
+movieontology:Lesotho a owl:NamedIndividual ;
+    owl:sameAs wd:Q1013 .
+
+movieontology:Liberia a owl:NamedIndividual ;
+    owl:sameAs wd:Q1014 .
+
+movieontology:Libya a owl:NamedIndividual ;
+    owl:sameAs wd:Q1016 .
+
+movieontology:Liechtenstein a owl:NamedIndividual ;
+    owl:sameAs wd:Q347 .
+
+movieontology:Lithuania a owl:NamedIndividual ;
+    owl:sameAs wd:Q37 .
+
+movieontology:Luxembourg a owl:NamedIndividual ;
+    owl:sameAs wd:Q32 .
+
+movieontology:Macao a owl:NamedIndividual ;
+    owl:sameAs wd:Q14773 .
+
+movieontology:Madagascar a owl:NamedIndividual ;
+    owl:sameAs wd:Q1019 .
+
+movieontology:Malawi a owl:NamedIndividual ;
+    owl:sameAs wd:Q1020 .
+
+movieontology:Malaysia a owl:NamedIndividual ;
+    owl:sameAs wd:Q833 .
+
+movieontology:Maldives a owl:NamedIndividual ;
+    owl:sameAs wd:Q826 .
+
+movieontology:Mali a owl:NamedIndividual ;
+    owl:sameAs wd:Q912 .
+
+movieontology:Malta a owl:NamedIndividual ;
+    owl:sameAs wd:Q233 .
+
+movieontology:Mauritania a owl:NamedIndividual ;
+    owl:sameAs wd:Q1025 .
+
+movieontology:Mauritius a owl:NamedIndividual ;
+    owl:sameAs wd:Q1027 .
+
+movieontology:Mexico a owl:NamedIndividual ;
+    owl:sameAs wd:Q82112,
+        wd:Q96 .
+
+movieontology:Moldova a owl:NamedIndividual ;
+    owl:sameAs wd:Q217 .
+
+movieontology:Monaco a owl:NamedIndividual ;
+    owl:sameAs wd:Q235 .
+
+movieontology:Mongolia a owl:NamedIndividual ;
+    owl:sameAs wd:Q711 .
+
+movieontology:Montenegro a owl:NamedIndividual ;
+    owl:sameAs wd:Q236 .
+
+movieontology:Montserrat a owl:NamedIndividual ;
+    owl:sameAs wd:Q13353 .
+
+movieontology:Morocco a owl:NamedIndividual ;
+    owl:sameAs wd:Q1028 .
+
+movieontology:Mozambique a owl:NamedIndividual ;
+    owl:sameAs wd:Q1029 .
+
+movieontology:Myanmar a owl:NamedIndividual ;
+    owl:sameAs wd:Q836 .
+
+movieontology:Namibia a owl:NamedIndividual ;
+    owl:sameAs wd:Q1030 .
+
+movieontology:Nauru a owl:NamedIndividual ;
+    owl:sameAs wd:Q697 .
+
+movieontology:Nepal a owl:NamedIndividual ;
+    owl:sameAs wd:Q837 .
+
+movieontology:Netherlands a owl:NamedIndividual ;
+    owl:sameAs wd:Q29999,
+        wd:Q55 .
+
+movieontology:New_Caledonia a owl:NamedIndividual ;
+    owl:sameAs wd:Q33788 .
+
+movieontology:Nicaragua a owl:NamedIndividual ;
+    owl:sameAs wd:Q811 .
+
+movieontology:Niger a owl:NamedIndividual ;
+    owl:sameAs wd:Q1032 .
+
+movieontology:Nigeria a owl:NamedIndividual ;
+    owl:sameAs wd:Q1033 .
+
+movieontology:Niue a owl:NamedIndividual ;
+    owl:sameAs wd:Q34020 .
+
+movieontology:North_Korea a owl:NamedIndividual ;
+    owl:sameAs wd:Q423 .
+
+movieontology:Norway a owl:NamedIndividual ;
+    owl:sameAs wd:Q20 .
+
+movieontology:Oman a owl:NamedIndividual ;
+    owl:sameAs wd:Q842 .
+
+movieontology:Pakistan a owl:NamedIndividual ;
+    owl:sameAs wd:Q843 .
+
+movieontology:Palau a owl:NamedIndividual ;
+    owl:sameAs wd:Q695 .
+
+movieontology:Palestine a owl:NamedIndividual ;
+    owl:sameAs wd:Q23792,
+        wd:Q36678,
+        wd:Q407199,
+        wd:Q42620 .
+
+movieontology:Panama a owl:NamedIndividual ;
+    owl:sameAs wd:Q232178,
+        wd:Q804 .
+
+movieontology:Papua_New_Guinea a owl:NamedIndividual ;
+    owl:sameAs wd:Q691 .
+
+movieontology:Paraguay a owl:NamedIndividual ;
+    owl:sameAs wd:Q733 .
+
+movieontology:Peru a owl:NamedIndividual ;
+    owl:sameAs wd:Q419 .
+
+movieontology:Philippines a owl:NamedIndividual ;
+    owl:sameAs wd:Q928 .
+
+movieontology:Poland a owl:NamedIndividual ;
+    owl:sameAs wd:Q36 .
+
+movieontology:Portugal a owl:NamedIndividual ;
+    owl:sameAs wd:Q415558,
+        wd:Q45 .
+
+movieontology:Puerto_Rico a owl:NamedIndividual ;
+    owl:sameAs wd:Q1183 .
+
+movieontology:Republic_of_Macedonia a owl:NamedIndividual ;
+    owl:sameAs wd:Q221 .
+
+movieontology:Reunion a owl:NamedIndividual ;
+    owl:sameAs wd:Q17070 .
+
+movieontology:Romania a owl:NamedIndividual ;
+    owl:sameAs wd:Q12544,
+        wd:Q218 .
+
+movieontology:Russia a owl:NamedIndividual ;
+    owl:sameAs wd:Q159 .
+
+movieontology:Rwanda a owl:NamedIndividual ;
+    owl:sameAs wd:Q1037 .
+
+movieontology:Saint-Barthelemy a owl:NamedIndividual ;
+    owl:sameAs wd:Q25362 .
+
+movieontology:Saint_Lucia a owl:NamedIndividual ;
+    owl:sameAs wd:Q760 .
+
+movieontology:Saint_Martin a owl:NamedIndividual ;
+    owl:sameAs wd:Q126125,
+        wd:Q25596 .
+
+movieontology:Saint_Pierre_and_Miquelon a owl:NamedIndividual ;
+    owl:sameAs wd:Q34617 .
+
+movieontology:Saint_Vincent_and_the_Grenadines a owl:NamedIndividual ;
+    owl:sameAs wd:Q757 .
+
+movieontology:Samoa a owl:NamedIndividual ;
+    owl:sameAs wd:Q683 .
+
+movieontology:San_Marino a owl:NamedIndividual ;
+    owl:sameAs wd:Q238 .
+
+movieontology:Sao_Tome_and_Principe a owl:NamedIndividual ;
+    owl:sameAs wd:Q1039 .
+
+movieontology:Saudi_Arabia a owl:NamedIndividual ;
+    owl:sameAs wd:Q851 .
+
+movieontology:Senegal a owl:NamedIndividual ;
+    owl:sameAs wd:Q1041 .
+
+movieontology:Serbia a owl:NamedIndividual ;
+    owl:sameAs wd:Q403 .
+
+movieontology:Seychelles a owl:NamedIndividual ;
+    owl:sameAs wd:Q1042 .
+
+movieontology:Sierra_Leone a owl:NamedIndividual ;
+    owl:sameAs wd:Q1044 .
+
+movieontology:Singapore a owl:NamedIndividual ;
+    owl:sameAs wd:Q334 .
+
+movieontology:Slovakia a owl:NamedIndividual ;
+    owl:sameAs wd:Q214 .
+
+movieontology:Slovenia a owl:NamedIndividual ;
+    owl:sameAs wd:Q215 .
+
+movieontology:Somalia a owl:NamedIndividual ;
+    owl:sameAs wd:Q1045 .
+
+movieontology:South_Africa a owl:NamedIndividual ;
+    owl:sameAs wd:Q258 .
+
+movieontology:South_Korea a owl:NamedIndividual ;
+    owl:sameAs wd:Q884 .
+
+movieontology:Spain a owl:NamedIndividual ;
+    owl:sameAs wd:Q29 .
+
+movieontology:Sri_Lanka a owl:NamedIndividual ;
+    owl:sameAs wd:Q854 .
+
+movieontology:Sudan a owl:NamedIndividual ;
+    owl:sameAs wd:Q1049 .
+
+movieontology:Suriname a owl:NamedIndividual ;
+    owl:sameAs wd:Q730 .
+
+movieontology:Swaziland a owl:NamedIndividual ;
+    owl:sameAs wd:Q1050 .
+
+movieontology:Sweden a owl:NamedIndividual ;
+    owl:sameAs wd:Q34 .
+
+movieontology:Switzerland a owl:NamedIndividual ;
+    owl:sameAs wd:Q39 .
+
+movieontology:Syria a owl:NamedIndividual ;
+    owl:sameAs wd:Q858 .
+
+movieontology:Taiwan a owl:NamedIndividual ;
+    owl:sameAs wd:Q865 .
+
+movieontology:Tajikistan a owl:NamedIndividual ;
+    owl:sameAs wd:Q863 .
+
+movieontology:Tanzania a owl:NamedIndividual ;
+    owl:sameAs wd:Q924 .
+
+movieontology:Thailand a owl:NamedIndividual ;
+    owl:sameAs wd:Q869 .
+
+movieontology:Timor-Leste a owl:NamedIndividual ;
+    owl:sameAs wd:Q574 .
+
+movieontology:Togo a owl:NamedIndividual ;
+    owl:sameAs wd:Q945 .
+
+movieontology:Tokelau a owl:NamedIndividual ;
+    owl:sameAs wd:Q36823 .
+
+movieontology:Tonga a owl:NamedIndividual ;
+    owl:sameAs wd:Q678 .
+
+movieontology:Trinidad_and_Tobago a owl:NamedIndividual ;
+    owl:sameAs wd:Q754,
+        wd:Q7842409 .
+
+movieontology:Tunisia a owl:NamedIndividual ;
+    owl:sameAs wd:Q948 .
+
+movieontology:Turkey a owl:NamedIndividual ;
+    owl:sameAs wd:Q43 .
+
+movieontology:Turkmenistan a owl:NamedIndividual ;
+    owl:sameAs wd:Q874 .
+
+movieontology:Turks_and_Caicos_Islands a owl:NamedIndividual ;
+    owl:sameAs wd:Q18221 .
+
+movieontology:Tuvalu a owl:NamedIndividual ;
+    owl:sameAs wd:Q672 .
+
+movieontology:USA a owl:NamedIndividual ;
+    owl:sameAs wd:Q12644050,
+        wd:Q30 .
+
+movieontology:Uganda a owl:NamedIndividual ;
+    owl:sameAs wd:Q1036,
+        wd:Q7877575 .
+
+movieontology:Ukraine a owl:NamedIndividual ;
+    owl:sameAs wd:Q212 .
+
+movieontology:United_Arab_Emirates a owl:NamedIndividual ;
+    owl:sameAs wd:Q878 .
+
+movieontology:United_Kingdom a owl:NamedIndividual ;
+    owl:sameAs wd:Q145 .
+
+movieontology:United_States_Virgin_Islands a owl:NamedIndividual ;
+    owl:sameAs wd:Q11703 .
+
+movieontology:Uruguay a owl:NamedIndividual ;
+    owl:sameAs wd:Q77 .
+
+movieontology:Uzbekistan a owl:NamedIndividual ;
+    owl:sameAs wd:Q265 .
+
+movieontology:Vanuatu a owl:NamedIndividual ;
+    owl:sameAs wd:Q686 .
+
+movieontology:Venezuela a owl:NamedIndividual ;
+    owl:sameAs wd:Q717 .
+
+movieontology:Vietnam a owl:NamedIndividual ;
+    owl:sameAs wd:Q881 .
+
+movieontology:Western_Sahara a owl:NamedIndividual ;
+    owl:sameAs wd:Q6250 .
+
+movieontology:Yemen a owl:NamedIndividual ;
+    owl:sameAs wd:Q805 .
+
+movieontology:Zaire a owl:NamedIndividual ;
+    owl:sameAs wd:Q974 .
+
+movieontology:Zambia a owl:NamedIndividual ;
+    owl:sameAs wd:Q953 .
+
+movieontology:Zimbabwe a owl:NamedIndividual ;
+    owl:sameAs wd:Q954 .
+
+wd:Q1000 a owl:NamedIndividual .
+
+wd:Q1005 a owl:NamedIndividual .
+
+wd:Q1006 a owl:NamedIndividual .
+
+wd:Q1008 a owl:NamedIndividual .
+
+wd:Q1009 a owl:NamedIndividual .
+
+wd:Q1011 a owl:NamedIndividual .
+
+wd:Q1013 a owl:NamedIndividual .
+
+wd:Q1014 a owl:NamedIndividual .
+
+wd:Q1016 a owl:NamedIndividual .
+
+wd:Q1019 a owl:NamedIndividual .
+
+wd:Q1020 a owl:NamedIndividual .
+
+wd:Q1025 a owl:NamedIndividual .
+
+wd:Q1027 a owl:NamedIndividual .
+
+wd:Q1028 a owl:NamedIndividual .
+
+wd:Q1029 a owl:NamedIndividual .
+
+wd:Q1030 a owl:NamedIndividual .
+
+wd:Q1032 a owl:NamedIndividual .
+
+wd:Q1033 a owl:NamedIndividual .
+
+wd:Q1036 a owl:NamedIndividual .
+
+wd:Q1037 a owl:NamedIndividual .
+
+wd:Q1039 a owl:NamedIndividual .
+
+wd:Q1041 a owl:NamedIndividual .
+
+wd:Q1042 a owl:NamedIndividual .
+
+wd:Q1044 a owl:NamedIndividual .
+
+wd:Q1045 a owl:NamedIndividual .
+
+wd:Q1049 a owl:NamedIndividual .
+
+wd:Q1050 a owl:NamedIndividual .
+
+wd:Q1054923 a owl:NamedIndividual .
+
+wd:Q114 a owl:NamedIndividual .
+
+wd:Q115 a owl:NamedIndividual .
+
+wd:Q117 a owl:NamedIndividual .
+
+wd:Q11703 a owl:NamedIndividual .
+
+wd:Q1183 a owl:NamedIndividual .
+
+wd:Q12544 a owl:NamedIndividual .
+
+wd:Q126125 a owl:NamedIndividual .
+
+wd:Q12644050 a owl:NamedIndividual .
+
+wd:Q12766653 a owl:NamedIndividual .
+
+wd:Q129286 a owl:NamedIndividual .
+
+wd:Q13353 a owl:NamedIndividual .
+
+wd:Q1410 a owl:NamedIndividual .
+
+wd:Q142 a owl:NamedIndividual .
+
+wd:Q145 a owl:NamedIndividual .
+
+wd:Q14773 a owl:NamedIndividual .
+
+wd:Q148 a owl:NamedIndividual .
+
+wd:Q155 a owl:NamedIndividual .
+
+wd:Q159 a owl:NamedIndividual .
+
+wd:Q16 a owl:NamedIndividual .
+
+wd:Q16641 a owl:NamedIndividual .
+
+wd:Q17 a owl:NamedIndividual .
+
+wd:Q17070 a owl:NamedIndividual .
+
+wd:Q18221 a owl:NamedIndividual .
+
+wd:Q183 a owl:NamedIndividual .
+
+wd:Q184 a owl:NamedIndividual .
+
+wd:Q189 a owl:NamedIndividual .
+
+wd:Q191 a owl:NamedIndividual .
+
+wd:Q20 a owl:NamedIndividual .
+
+wd:Q202311 a owl:NamedIndividual .
+
+wd:Q2060630 a owl:NamedIndividual .
+
+wd:Q211 a owl:NamedIndividual .
+
+wd:Q212 a owl:NamedIndividual .
+
+wd:Q21203 a owl:NamedIndividual .
+
+wd:Q213 a owl:NamedIndividual .
+
+wd:Q214 a owl:NamedIndividual .
+
+wd:Q215 a owl:NamedIndividual .
+
+wd:Q217 a owl:NamedIndividual .
+
+wd:Q218 a owl:NamedIndividual .
+
+wd:Q219 a owl:NamedIndividual .
+
+wd:Q221 a owl:NamedIndividual .
+
+wd:Q222 a owl:NamedIndividual .
+
+wd:Q223 a owl:NamedIndividual .
+
+wd:Q224 a owl:NamedIndividual .
+
+wd:Q225 a owl:NamedIndividual .
+
+wd:Q227 a owl:NamedIndividual .
+
+wd:Q228 a owl:NamedIndividual .
+
+wd:Q229 a owl:NamedIndividual .
+
+wd:Q230 a owl:NamedIndividual .
+
+wd:Q232 a owl:NamedIndividual .
+
+wd:Q232178 a owl:NamedIndividual .
+
+wd:Q233 a owl:NamedIndividual .
+
+wd:Q235 a owl:NamedIndividual .
+
+wd:Q236 a owl:NamedIndividual .
+
+wd:Q23635 a owl:NamedIndividual .
+
+wd:Q23792 a owl:NamedIndividual .
+
+wd:Q238 a owl:NamedIndividual .
+
+wd:Q241 a owl:NamedIndividual .
+
+wd:Q242 a owl:NamedIndividual .
+
+wd:Q244 a owl:NamedIndividual .
+
+wd:Q252 a owl:NamedIndividual .
+
+wd:Q25228 a owl:NamedIndividual .
+
+wd:Q25305 a owl:NamedIndividual .
+
+wd:Q25362 a owl:NamedIndividual .
+
+wd:Q25596 a owl:NamedIndividual .
+
+wd:Q258 a owl:NamedIndividual .
+
+wd:Q262 a owl:NamedIndividual .
+
+wd:Q265 a owl:NamedIndividual .
+
+wd:Q26988 a owl:NamedIndividual .
+
+wd:Q27 a owl:NamedIndividual .
+
+wd:Q28 a owl:NamedIndividual .
+
+wd:Q29 a owl:NamedIndividual .
+
+wd:Q29520 a owl:NamedIndividual .
+
+wd:Q298 a owl:NamedIndividual .
+
+wd:Q29999 a owl:NamedIndividual .
+
+wd:Q30 a owl:NamedIndividual .
+
+wd:Q30971 a owl:NamedIndividual .
+
+wd:Q31 a owl:NamedIndividual .
+
+wd:Q32 a owl:NamedIndividual .
+
+wd:Q33 a owl:NamedIndividual .
+
+wd:Q334 a owl:NamedIndividual .
+
+wd:Q33788 a owl:NamedIndividual .
+
+wd:Q34 a owl:NamedIndividual .
+
+wd:Q34020 a owl:NamedIndividual .
+
+wd:Q34617 a owl:NamedIndividual .
+
+wd:Q347 a owl:NamedIndividual .
+
+wd:Q35 a owl:NamedIndividual .
+
+wd:Q35178 a owl:NamedIndividual .
+
+wd:Q36 a owl:NamedIndividual .
+
+wd:Q36678 a owl:NamedIndividual .
+
+wd:Q36823 a owl:NamedIndividual .
+
+wd:Q37 a owl:NamedIndividual .
+
+wd:Q3769 a owl:NamedIndividual .
+
+wd:Q38 a owl:NamedIndividual .
+
+wd:Q39 a owl:NamedIndividual .
+
+wd:Q398 a owl:NamedIndividual .
+
+wd:Q399 a owl:NamedIndividual .
+
+wd:Q40 a owl:NamedIndividual .
+
+wd:Q403 a owl:NamedIndividual .
+
+wd:Q407199 a owl:NamedIndividual .
+
+wd:Q408 a owl:NamedIndividual .
+
+wd:Q41 a owl:NamedIndividual .
+
+wd:Q414 a owl:NamedIndividual .
+
+wd:Q415558 a owl:NamedIndividual .
+
+wd:Q419 a owl:NamedIndividual .
+
+wd:Q423 a owl:NamedIndividual .
+
+wd:Q42314 a owl:NamedIndividual .
+
+wd:Q424 a owl:NamedIndividual .
+
+wd:Q42620 a owl:NamedIndividual .
+
+wd:Q43 a owl:NamedIndividual .
+
+wd:Q45 a owl:NamedIndividual .
+
+wd:Q4628 a owl:NamedIndividual .
+
+wd:Q533534 a owl:NamedIndividual .
+
+wd:Q55 a owl:NamedIndividual .
+
+wd:Q5555325 a owl:NamedIndividual .
+
+wd:Q574 a owl:NamedIndividual .
+
+wd:Q5785 a owl:NamedIndividual .
+
+wd:Q6250 a owl:NamedIndividual .
+
+wd:Q644636 a owl:NamedIndividual .
+
+wd:Q657 a owl:NamedIndividual .
+
+wd:Q664 a owl:NamedIndividual .
+
+wd:Q668 a owl:NamedIndividual .
+
+wd:Q672 a owl:NamedIndividual .
+
+wd:Q678 a owl:NamedIndividual .
+
+wd:Q683 a owl:NamedIndividual .
+
+wd:Q686 a owl:NamedIndividual .
+
+wd:Q691 a owl:NamedIndividual .
+
+wd:Q695 a owl:NamedIndividual .
+
+wd:Q697 a owl:NamedIndividual .
+
+wd:Q702 a owl:NamedIndividual .
+
+wd:Q710 a owl:NamedIndividual .
+
+wd:Q711 a owl:NamedIndividual .
+
+wd:Q712 a owl:NamedIndividual .
+
+wd:Q717 a owl:NamedIndividual .
+
+wd:Q730 a owl:NamedIndividual .
+
+wd:Q733 a owl:NamedIndividual .
+
+wd:Q734 a owl:NamedIndividual .
+
+wd:Q736 a owl:NamedIndividual .
+
+wd:Q739 a owl:NamedIndividual .
+
+wd:Q750 a owl:NamedIndividual .
+
+wd:Q754 a owl:NamedIndividual .
+
+wd:Q756617 a owl:NamedIndividual .
+
+wd:Q757 a owl:NamedIndividual .
+
+wd:Q760 a owl:NamedIndividual .
+
+wd:Q766 a owl:NamedIndividual .
+
+wd:Q769 a owl:NamedIndividual .
+
+wd:Q77 a owl:NamedIndividual .
+
+wd:Q774 a owl:NamedIndividual .
+
+wd:Q778 a owl:NamedIndividual .
+
+wd:Q781 a owl:NamedIndividual .
+
+wd:Q783 a owl:NamedIndividual .
+
+wd:Q784 a owl:NamedIndividual .
+
+wd:Q7842409 a owl:NamedIndividual .
+
+wd:Q785 a owl:NamedIndividual .
+
+wd:Q786 a owl:NamedIndividual .
+
+wd:Q7877575 a owl:NamedIndividual .
+
+wd:Q79 a owl:NamedIndividual .
+
+wd:Q790 a owl:NamedIndividual .
+
+wd:Q792 a owl:NamedIndividual .
+
+wd:Q794 a owl:NamedIndividual .
+
+wd:Q796 a owl:NamedIndividual .
+
+wd:Q800 a owl:NamedIndividual .
+
+wd:Q801 a owl:NamedIndividual .
+
+wd:Q804 a owl:NamedIndividual .
+
+wd:Q805 a owl:NamedIndividual .
+
+wd:Q810 a owl:NamedIndividual .
+
+wd:Q811 a owl:NamedIndividual .
+
+wd:Q813 a owl:NamedIndividual .
+
+wd:Q817 a owl:NamedIndividual .
+
+wd:Q819 a owl:NamedIndividual .
+
+wd:Q82112 a owl:NamedIndividual .
+
+wd:Q822 a owl:NamedIndividual .
+
+wd:Q826 a owl:NamedIndividual .
+
+wd:Q833 a owl:NamedIndividual .
+
+wd:Q837 a owl:NamedIndividual .
+
+wd:Q842 a owl:NamedIndividual .
+
+wd:Q843 a owl:NamedIndividual .
+
+wd:Q851 a owl:NamedIndividual .
+
+wd:Q854 a owl:NamedIndividual .
+
+wd:Q858 a owl:NamedIndividual .
+
+wd:Q863 a owl:NamedIndividual .
+
+wd:Q8646 a owl:NamedIndividual .
+
+wd:Q865 a owl:NamedIndividual .
+
+wd:Q869 a owl:NamedIndividual .
+
+wd:Q874 a owl:NamedIndividual .
+
+wd:Q878 a owl:NamedIndividual .
+
+wd:Q881 a owl:NamedIndividual .
+
+wd:Q884 a owl:NamedIndividual .
+
+wd:Q889 a owl:NamedIndividual .
+
+wd:Q902 a owl:NamedIndividual .
+
+wd:Q912 a owl:NamedIndividual .
+
+wd:Q916 a owl:NamedIndividual .
+
+wd:Q917 a owl:NamedIndividual .
+
+wd:Q921 a owl:NamedIndividual .
+
+wd:Q924 a owl:NamedIndividual .
+
+wd:Q928 a owl:NamedIndividual .
+
+wd:Q929 a owl:NamedIndividual .
+
+wd:Q945 a owl:NamedIndividual .
+
+wd:Q948 a owl:NamedIndividual .
+
+wd:Q953 a owl:NamedIndividual .
+
+wd:Q954 a owl:NamedIndividual .
+
+wd:Q96 a owl:NamedIndividual .
+
+wd:Q962 a owl:NamedIndividual .
+
+wd:Q963 a owl:NamedIndividual .
+
+wd:Q9648 a owl:NamedIndividual .
+
+wd:Q965 a owl:NamedIndividual .
+
+wd:Q967 a owl:NamedIndividual .
+
+wd:Q9676 a owl:NamedIndividual .
+
+wd:Q970 a owl:NamedIndividual .
+
+wd:Q977 a owl:NamedIndividual .
+
+wd:Q983 a owl:NamedIndividual .
+
+wd:Q986 a owl:NamedIndividual .
+
+wd:Q836 a owl:NamedIndividual .
+
+wd:Q974 a owl:NamedIndividual .
+

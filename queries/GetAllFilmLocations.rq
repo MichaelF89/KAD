@@ -1,0 +1,10 @@
+SELECT DISTINCT ?nloc (GROUP_CONCAT(DISTINCT ?nmovie; separator=", ") AS ?nmovie) ?long ?lat
+WHERE {
+  ?movie rdf:type movie:film;
+         rdfs:label ?nmovie ;
+         movie:featured_film_location ?loc .
+  ?loc rdfs:label ?nloc ;
+       ex:long ?long ;
+       ex:lat ?lat .
+  }
+GROUP BY ?nloc ?long ?lat
